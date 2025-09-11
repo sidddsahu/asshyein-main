@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/fav.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3Q9VGMBMS1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3Q9VGMBMS1');
+</script>
+
+
+    <style media="screen" type="text/css">
+      .td_preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #fff;
+        z-index: 99999;
+      }
+      .td_preloader::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background-color: var(--accent-color);
+        opacity: 0.2;
+      }
+
+      .td_preloader_in {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 0;
+        display: inline-block;
+        margin: -25px 0 0 -25px;
+        text-indent: -9999em;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        z-index: 3;
+      }
+
+      .td_preloader_in span {
+        background-color: var(--accent-color);
+        display: inline-block;
+        float: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        opacity: 0.5;
+        border-radius: 50%;
+        -webkit-animation: ballPulseDouble 2s ease-in-out infinite;
+        animation: ballPulseDouble 2s ease-in-out infinite;
+      }
+
+      .td_preloader_in span:last-child {
+        -webkit-animation-delay: -1s;
+        animation-delay: -1s;
+      }
+
+      @-webkit-keyframes ballPulseDouble {
+        0%,
+        100% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+
+      @keyframes ballPulseDouble {
+        0%,
+        100% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="td_preloader">
+        <div class="td_preloader_in">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/vfs_fonts.js"></script>
+  </body>
+</html>

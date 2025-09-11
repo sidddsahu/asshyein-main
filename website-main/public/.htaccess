@@ -1,0 +1,31 @@
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteBase /
+
+#   # sitemap.xml agar backend se serve karna hai
+#   RewriteCond %{REQUEST_URI} ^/sitemap\.xml$
+#   RewriteRule ^(.*)$ http://localhost:8000/sitemap.xml [R=302,L]
+
+#   # Agar request kisi existing file ya folder ki nahi hai
+#   RewriteCond %{REQUEST_FILENAME} !-f
+#   RewriteCond %{REQUEST_FILENAME} !-d
+
+#   # Hamesha index.html serve karo (React Router ke liye)
+#   RewriteRule . /index.html [L]
+# </IfModule>
+
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # ---- sitemap: map to sitemap.php (no redirect) ----
+  RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+  # Agar request kisi existing file ya folder ki nahi hai
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # React Router ke liye index.html serve karo
+  RewriteRule . /index.html [L]
+</IfModule>
